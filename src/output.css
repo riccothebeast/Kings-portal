@@ -227,6 +227,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -302,6 +305,9 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
+  .contents {
+    display: contents;
+  }
   .flex {
     display: flex;
   }
@@ -316,9 +322,6 @@
   }
   .inline-flex {
     display: inline-flex;
-  }
-  .table {
-    display: table;
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
@@ -374,14 +377,8 @@
   .max-w-xl {
     max-width: var(--container-xl);
   }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .grow {
     flex-grow: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -391,9 +388,6 @@
   }
   .animate-pulse {
     animation: var(--animate-pulse);
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -495,38 +489,8 @@
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\'\'\)\] {
-    background-image: url('');
-  }
-  .bg-\[url\(\'\.\/images\/background\.png\'\)\] {
-    background-image: url('./images/background.png');
-  }
-  .bg-\[url\(\'\/\'\)\] {
-    background-image: url('/');
-  }
-  .bg-\[url\(\'\/\/\/\/images\/background\.png\'\)\] {
-    background-image: url('////images/background.png');
-  }
-  .bg-\[url\(\'\/\/\/images\/background\.png\'\)\] {
-    background-image: url('///images/background.png');
-  }
-  .bg-\[url\(\'\/\/images\/background\.png\'\)\] {
-    background-image: url('//images/background.png');
-  }
-  .bg-\[url\(\'\/im\'\)\] {
-    background-image: url('/im');
-  }
   .bg-\[url\(\'\/images\/background\.png\'\)\] {
     background-image: url('/images/background.png');
-  }
-  .bg-\[url\(\'im\'\)\] {
-    background-image: url('im');
-  }
-  .bg-\[url\(\'image\'\)\] {
-    background-image: url('image');
-  }
-  .bg-\[url\(\'images\/background\.png\'\)\] {
-    background-image: url('images/background.png');
   }
   .from-blue-600 {
     --tw-gradient-from: var(--color-blue-600);
@@ -651,9 +615,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-70 {
     opacity: 70%;
   }
@@ -678,10 +639,6 @@
   }
   .ring-transparent {
     --tw-ring-color: transparent;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
@@ -784,13 +741,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-blue-400);
-      }
-    }
-  }
-  .hover\:text-yellow-300 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-yellow-300);
       }
     }
   }
@@ -1144,11 +1094,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1217,7 +1162,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-scale-x: 1;
